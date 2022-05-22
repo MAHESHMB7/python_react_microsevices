@@ -5,6 +5,6 @@ from .models import Post
 
 
 class PostSerializer(serializers.ModelSerializer):
-    class meta:
+    class Meta:
         model=Post
-        fields='____all____ '
+        fields=('id','title','description')

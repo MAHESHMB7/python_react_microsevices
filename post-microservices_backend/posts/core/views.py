@@ -10,3 +10,8 @@ class PostAPIView(APIView):
         posts=Post.objects.all()
         serializer=PostSerializer(posts,many=True)
         return Response(serializer.data)
+    def post(self,request):
+        serializer=PostSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data)
