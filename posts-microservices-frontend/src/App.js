@@ -48,13 +48,21 @@ function App() {
 
         comment = ''
 
-        setPosts(posts.map(p => {
-            if (p.id === post_id) {
-                p.comments.push(createdComment)
-            }
+        // setPosts(posts.map(p => {
+        //     if (p.id === post_id) {
+        //         p.comments.push(createdComment)
+        //     }
 
-            return p;
-        }))
+        //     return p;
+        // }))
+
+          setPosts(
+             posts.map(createdComment)
+          )
+
+
+
+
     }
     return (
         <div className="App container">
